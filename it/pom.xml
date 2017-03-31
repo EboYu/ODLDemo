@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <parent>
+    <groupId>org.opendaylight.controller</groupId>
+    <artifactId>mdsal-it-parent</artifactId>
+    <version>1.5.0-SNAPSHOT</version>
+    <relativePath/>
+  </parent>
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.whu.odl.exampleapp</groupId>
+  <artifactId>exampleapp-it</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>bundle</packaging>
+
+  <properties>
+    <skipITs>false</skipITs>
+    <karaf.distro.groupId>com.whu.odl.exampleapp</karaf.distro.groupId>
+    <karaf.distro.artifactId>exampleapp-karaf</karaf.distro.artifactId>
+    <karaf.distro.version>1.0.0-SNAPSHOT</karaf.distro.version>
+    <karaf.distro.type>zip</karaf.distro.type>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>exampleapp-features</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+  </dependencies>
+
+</project>

@@ -1,0 +1,24 @@
+module cat {
+    yang-version 1;
+    namespace "urn:opendaylight:params:xml:ns:yang:cat";
+    prefix "cat";
+
+    revision "2017-03-23" {
+        description "Initial revision of cat model";
+    }
+
+    rpc mewo{
+        input {
+              leaf traceID {
+                    type string;
+              }
+
+              leaf num {
+                 type uint32 {
+                    range "1 .. 10";
+                 }
+                    default 1;
+                 }
+              }
+    }
+}

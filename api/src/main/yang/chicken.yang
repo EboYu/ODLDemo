@@ -1,0 +1,26 @@
+module chicken {
+    yang-version 1;
+    namespace "urn:opendaylight:params:xml:ns:yang:chicken";
+    prefix "chicken";
+
+    revision "2017-03-23" {
+        description "Initial revision of chicken model";
+    }
+
+    rpc gege{
+        input {
+              leaf traceID {
+                    type string;
+              }
+
+              leaf num {
+                 type uint32 {
+                    range "1 .. 10";
+                 }
+                    default 1;
+                 }
+              }
+
+
+    }
+}

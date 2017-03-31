@@ -1,0 +1,90 @@
+module animal {
+    yang-version 1;
+    namespace "urn:opendaylight:params:xml:ns:yang:animal";
+    prefix "animal";
+
+    import config { prefix config; revision-date 2013-04-05; }
+    import opendaylight-md-sal-binding { prefix md-sal-binding; revision-date 2013-10-28;}
+
+    description
+        "Service definition";
+
+    revision "2017-03-23" {
+        description
+            "Initial revision";
+    }
+
+    identity animal {
+        base config:module-type;
+        config:java-name-prefix animal;
+    }
+
+    augment "/config:modules/config:module/config:configuration" {
+        case animal {
+            when "/config:modules/config:module/config:type = 'animal'";
+
+            container data-broker {
+                uses config:service-ref {
+                    refine type {
+                        mandatory true;
+                        config:required-identity md-sal-binding:binding-async-data-broker;
+                    }
+                }
+            }
+
+            container rpc-registry {
+                 uses config:service-ref {
+                    refine type {
+                         mandatory true;
+                         config:required-identity md-sal-binding:binding-rpc-registry;
+                     }
+                  }
+            }
+        }
+    }
+
+
+    rpc make-cat{
+       input {
+           leaf traceID {
+               type string;
+           }
+
+           leaf num {
+               type uint32 {
+                  range "1 .. 10";
+               }
+                  default 1;
+               }
+           }
+    }
+    rpc make-dog{
+           input {
+               leaf traceID {
+                   type string;
+               }
+
+               leaf num {
+                   type uint32 {
+                      range "1 .. 10";
+                   }
+                      default 1;
+                   }
+               }
+        }
+
+    rpc make-chicken{
+           input {
+               leaf traceID {
+                   type string;
+               }
+
+               leaf num {
+                   type uint32 {
+                      range "1 .. 10";
+                   }
+                      default 1;
+                   }
+               }
+    }
+}

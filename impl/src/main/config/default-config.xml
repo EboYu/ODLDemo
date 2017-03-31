@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snapshot>
+  <required-capabilities>
+      <capability>urn:opendaylight:params:xml:ns:yang:exampleapp:impl?module=exampleapp-impl&amp;revision=2017-03-23</capability>
+      <capability>urn:opendaylight:params:xml:ns:yang:animal?module=animal&amp;revision=2017-03-23</capability>
+      <capability>urn:opendaylight:params:xml:ns:yang:cat:impl?module=cat-impl&amp;revision=2017-03-23</capability>
+      <capability>urn:opendaylight:params:xml:ns:yang:dog:impl?module=dog-impl&amp;revision=2017-03-23</capability>
+      <capability>urn:opendaylight:params:xml:ns:yang:chicken:impl?module=chicken-impl&amp;revision=2017-03-23</capability>
+      <capability>urn:opendaylight:params:xml:ns:yang:controller:md:sal:binding?module=opendaylight-md-sal-binding&amp;revision=2013-10-28</capability>
+  </required-capabilities>
+  <configuration>
+
+    <data xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+      <modules xmlns="urn:opendaylight:params:xml:ns:yang:controller:config">
+        <module>
+          <type xmlns:prefix="urn:opendaylight:params:xml:ns:yang:exampleapp:impl">prefix:exampleapp</type>
+          <name>exampleapp-default</name>
+          <data-broker>
+            <type xmlns:binding="urn:opendaylight:params:xml:ns:yang:controller:md:sal:binding">binding:binding-async-data-broker</type>
+            <name>binding-data-broker</name>
+          </data-broker>
+          <rpc-registry>
+            <type  xmlns:binding="urn:opendaylight:params:xml:ns:yang:controller:md:sal:binding">binding:binding-rpc-registry</type>
+            <name>binding-rpc-broker</name>
+          </rpc-registry>
+        </module>
+        <module>
+          <type xmlns:prefix="urn:opendaylight:params:xml:ns:yang:animal">prefix:animal</type>
+          <name>animal-default</name>
+          <data-broker>
+            <type xmlns:binding="urn:opendaylight:params:xml:ns:yang:controller:md:sal:binding">binding:binding-async-data-broker</type>
+            <name>binding-data-broker</name>
+          </data-broker>
+          <rpc-registry>
+            <type  xmlns:binding="urn:opendaylight:params:xml:ns:yang:controller:md:sal:binding">binding:binding-rpc-registry</type>
+            <name>binding-rpc-broker</name>
+          </rpc-registry>
+        </module>
+        <module>
+          <type xmlns:prefix="urn:opendaylight:params:xml:ns:yang:dog:impl">prefix:dog</type>
+          <name>dog-default</name>
+          <data-broker>
+            <type xmlns:binding="urn:opendaylight:params:xml:ns:yang:controller:md:sal:binding">binding:binding-async-data-broker</type>
+            <name>binding-data-broker</name>
+          </data-broker>
+          <rpc-registry>
+            <type  xmlns:binding="urn:opendaylight:params:xml:ns:yang:controller:md:sal:binding">binding:binding-rpc-registry</type>
+            <name>binding-rpc-broker</name>
+          </rpc-registry>
+        </module>
+        <module>
+          <type xmlns:prefix="urn:opendaylight:params:xml:ns:yang:cat:impl">prefix:cat</type>
+          <name>cat-default</name>
+          <data-broker>
+            <type xmlns:binding="urn:opendaylight:params:xml:ns:yang:controller:md:sal:binding">binding:binding-async-data-broker</type>
+            <name>binding-data-broker</name>
+          </data-broker>
+          <rpc-registry>
+            <type  xmlns:binding="urn:opendaylight:params:xml:ns:yang:controller:md:sal:binding">binding:binding-rpc-registry</type>
+            <name>binding-rpc-broker</name>
+          </rpc-registry>
+        </module>
+        <module>
+          <type xmlns:prefix="urn:opendaylight:params:xml:ns:yang:chicken:impl">prefix:chicken</type>
+          <name>chicken-default</name>
+          <data-broker>
+            <type xmlns:binding="urn:opendaylight:params:xml:ns:yang:controller:md:sal:binding">binding:binding-async-data-broker</type>
+            <name>binding-data-broker</name>
+          </data-broker>
+          <rpc-registry>
+            <type  xmlns:binding="urn:opendaylight:params:xml:ns:yang:controller:md:sal:binding">binding:binding-rpc-registry</type>
+            <name>binding-rpc-broker</name>
+          </rpc-registry>
+        </module>
+      </modules>
+    </data>
+  </configuration>
+</snapshot>

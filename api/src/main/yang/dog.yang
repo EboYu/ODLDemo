@@ -1,0 +1,26 @@
+module dog {
+    yang-version 1;
+    namespace "urn:opendaylight:params:xml:ns:yang:dog";
+    prefix "dog";
+
+    revision "2017-03-23" {
+        description "Initial revision of dog model";
+    }
+
+    rpc bark{
+        input {
+              leaf traceID {
+                    type string;
+              }
+
+              leaf num {
+                 type uint32 {
+                    range "1 .. 10";
+                 }
+                    default 1;
+                 }
+              }
+
+
+    }
+}
