@@ -24,7 +24,7 @@ import java.util.concurrent.Future;
 
 public class DogProvider implements DogService {
 
-    private static final Logger LOG = LoggerFactory.getLogger(ExampleappProvider.class);
+    private static final Logger LOG = LoggerFactory.getLogger(DogProvider.class);
 
     private final DataBroker dataBroker;
     private final RpcProviderRegistry rpcRegistry;

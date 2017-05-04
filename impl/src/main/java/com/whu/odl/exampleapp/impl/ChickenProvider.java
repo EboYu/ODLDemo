@@ -23,7 +23,7 @@ import org.slf4j.LoggerFactory;
 import java.util.concurrent.Future;
 
 public class ChickenProvider implements ChickenService{
-    private static final Logger LOG = LoggerFactory.getLogger(ExampleappProvider.class);
+    private static final Logger LOG = LoggerFactory.getLogger(ChickenProvider.class);
 
     private final DataBroker dataBroker;
     private final RpcProviderRegistry rpcRegistry;

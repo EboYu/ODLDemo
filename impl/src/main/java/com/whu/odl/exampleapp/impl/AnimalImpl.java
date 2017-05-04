@@ -16,11 +16,14 @@ import org.opendaylight.yang.gen.v1.urn.opendaylight.params.xml.ns.yang.animal.r
 import org.opendaylight.yang.gen.v1.urn.opendaylight.params.xml.ns.yang.animal.rev170323.MakeDogInput;
 import org.opendaylight.yangtools.yang.common.RpcResult;
 import org.opendaylight.yangtools.yang.common.RpcResultBuilder;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.Future;
 
 public class AnimalImpl implements AnimalService{
 
+    private static final Logger LOG = LoggerFactory.getLogger(AnimalImpl.class);
     private final DataBroker dataBroker;
     private final RpcProviderRegistry rpcRegistry;
     private static final Future<RpcResult<Void>> RPC_SUCCESS = RpcResultBuilder.<Void>success().buildFuture();
@@ -40,6 +43,7 @@ public class AnimalImpl implements AnimalService{
         for(long i=0; i<input.getNum();i++){
             sleep(100);
         }
+        LOG.info("Make Cat successfully");
         return RPC_SUCCESS;
     }
 
@@ -52,6 +56,7 @@ public class AnimalImpl implements AnimalService{
         for(long i=0; i<input.getNum();i++){
             sleep(80);
         }
+        LOG.info("Make Chicken successfully");
         return RPC_SUCCESS;
     }
 
@@ -64,6 +69,7 @@ public class AnimalImpl implements AnimalService{
         for(long i=0; i<input.getNum();i++){
             sleep(120);
         }
+        LOG.info("Make Dog successfully");
         return RPC_SUCCESS;
     }
 

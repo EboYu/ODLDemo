@@ -110,6 +110,7 @@ public class ExampleappProvider implements ExampleappService {
 
         ServiceAccountOutputBuilder serviceAccBuilder = new ServiceAccountOutputBuilder();
         serviceAccBuilder.setServiceName("RPC request successful for Service: " + input.getName());
+        LOG.info("Execute task.");
         return RpcResultBuilder.success(serviceAccBuilder.build()).buildFuture();
     }
 

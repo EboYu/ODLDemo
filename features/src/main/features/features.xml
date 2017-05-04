@@ -14,7 +14,6 @@
   </feature>
   <feature name='odl-exampleapp' version='${project.version}' description='OpenDaylight :: exampleapp'>
     <feature version='${mdsal.version}'>odl-mdsal-broker</feature>
-
     <feature version='${project.version}'>odl-exampleapp-api</feature>
     <bundle>mvn:com.whu.odl.exampleapp/exampleapp-impl/{{VERSION}}</bundle>
     <configfile finalname="${configfile.directory}/exampleapp.xml">mvn:com.whu.odl.exampleapp/exampleapp-impl/{{VERSION}}/xml/config</configfile>

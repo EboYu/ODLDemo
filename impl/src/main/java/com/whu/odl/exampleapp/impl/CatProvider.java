@@ -23,7 +23,7 @@ import org.slf4j.LoggerFactory;
 import java.util.concurrent.Future;
 
 public class CatProvider implements CatService{
-    private static final Logger LOG = LoggerFactory.getLogger(ExampleappProvider.class);
+    private static final Logger LOG = LoggerFactory.getLogger(CatProvider.class);
 
     private final DataBroker dataBroker;
     private final RpcProviderRegistry rpcRegistry;
@@ -40,6 +40,7 @@ public class CatProvider implements CatService{
     @Override
     public Future<RpcResult<Void>> mewo(MewoInput input) {
         makeCat(input.getNum());
+        //LOG.info("Make Cat");
         return Futures.immediateFuture(RpcResultBuilder.<Void>success().build());
 
     }
@@ -47,11 +48,11 @@ public class CatProvider implements CatService{
     private void makeCat(long num){
         for(long i=0; i<num;i++){
             try {
-                //LOG.info("Making Cat, Sleep for 1 Seconds");
+                LOG.info("Making Cat, Sleep for 1 Seconds");
                 Thread.sleep(1000);
 
             } catch (InterruptedException e) {
-                ///LOG.info("Interrupted when making the Cat: {}", e);
+                LOG.info("Interrupted when making the Cat: {}", e);
             }
         }
 
